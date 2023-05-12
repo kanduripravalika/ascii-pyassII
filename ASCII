@@ -1,0 +1,60 @@
+# case 1
+
+my_dict = {}
+for i in range(97, 97 + 26):
+    my_dict[chr(i)] = i
+print(my_dict)
+
+excepted output:
+{'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101, 'f': 102, 'g': 103, 'h': 104, 'i': 105, 'j': 106, 'k': 107, 'l': 108, 'm': 109, 'n': 110, 'o': 111, 'p': 112, 'q': 113, 'r': 114, 's': 115, 't': 116, 'u': 117, 'v': 118, 'w': 119, 'x': 120, 'y': 121, 'z': 122}
+
+#case 2
+
+asciidict = dict()
+for i in range(97,123):
+    asciidict[chr(i)]=i
+    key=asciidict.keys()
+    value=asciidict.values()
+print("ASCII Dict:", asciidict)
+
+excepted output:
+ASCII Dict: {'a': 97, 'b': 98, 'c': 99, 'd': 100, 'e': 101, 'f': 102, 'g': 103, 'h': 104, 'i': 105, 'j': 106, 'k': 107, 'l': 108, 'm': 109, 'n': 110, 'o': 111, 'p': 112, 'q': 113, 'r': 114, 's': 115, 't': 116, 'u': 117, 'v': 118, 'w': 119, 'x': 120, 'y': 121, 'z': 122}
+
+#case3:
+
+print("Enter a String: ", end="")
+text = input()
+text = "".join(dict.fromkeys(text))
+textlen = len(text)
+for ch in text:
+    asc = ord(ch)
+    print(ch, "", asc)
+    
+excepted output:
+Enter a String: abcdefghijklmnopqurstuvwxyz
+a  97
+b  98
+c  99
+d  100
+e  101
+f  102
+g  103
+h  104
+i  105
+j  106
+k  107
+l  108
+m  109
+n  110
+o  111
+p  112
+q  113
+u  117
+r  114
+s  115
+t  116
+v  118
+w  119
+x  120
+y  121
+z  122
